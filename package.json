@@ -1,7 +1,7 @@
 {
   "name": "chamadosinternos-backend",
   "version": "1.0.0",
-  "main": "dist/server.js",
+  "main": "dist/serve.js",
   "scripts": {
     "build": "tsc",
     "start": "node dist/serve.js",
