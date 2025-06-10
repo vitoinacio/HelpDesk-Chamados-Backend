@@ -3,15 +3,14 @@
   "outputDirectory": "",
   "builds": [
     {
-      "src": "dist/serve.js",
+      "src": "src/serve.ts",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/(.*)", 
-      "dest": "/dist/serve.js"
+      "src": "/(.*)",
+      "dest": "/src/serve.ts"
     }
-  ],
-  "buildCommand": "npm run build"
+  ]
 }
