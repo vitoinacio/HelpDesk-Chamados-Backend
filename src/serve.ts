@@ -12,16 +12,9 @@ const allowedOrigins = [
 
 app.use(cors({
   origin: (origin, callback) => {
-    console.log('--- CORS DEBUG ---');
-    console.log('Origem da requisição (origin):', origin);
-    console.log('Origens permitidas (allowedOrigins):', allowedOrigins);
-
     if (!origin || allowedOrigins.includes(origin)) {
-      console.log('O `origin` está incluído em `allowedOrigins`?', allowedOrigins.includes(origin as string));
-      console.log('Origem permitida.');
       callback(null, true);
     } else {
-      console.log('Origem NÃO permitida:', origin);
       callback(new Error('Not allowed by CORS'));
     }
   },
